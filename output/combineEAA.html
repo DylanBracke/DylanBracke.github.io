@@ -1,0 +1,71 @@
+const fs = require('fs');
+const path = require('path');
+const cheerio = require('cheerio');
+
+const baseHtmlDir = path.join(__dirname, 'tests/base');
+const wcagHtmlDir = path.join(__dirname, 'tests/WCAG2.1');
+
+const OutputDir = path.join(__dirname, 'output');
+
+const combinedBaseHtmlFile = path.join(OutputDir, 'combineBase.html');
+const combinedWCAGHtmlFile = path.join(OutputDir, 'combineWCAG.html');
+
+if (!fs.existsSync(OutputDir)) {
+  fs.mkdirSync(OutputDir);
+}
+
+const cssStyles = `
+  .test main{ border: 2px solid gray; margin: 1rem; padding:1rem; }
+  .test h1 { cursor: pointer; }
+`;
+
+const combineHeadAndBody = (htmlFiles, htmlDir) => {
+  return htmlFiles.reduce((acc, file) => {
+    const html = fs.readFileSync(path.join(htmlDir, file), 'utf8');
+    const $ = cheerio.load(html);
+    const bodyHtml = $('body').html();
+    const title = $('h1').text();
+    const testHtml = `<div class="test">${bodyHtml}</div>`;
+    return acc + `<div><h1 onclick="window.open('${file}', '_blank')">${title}</h1></div>` + testHtml;
+  }, '');
+};
+
+const traverseFolder = (folderPath) => {
+  let combinedHtml = '';
+
+  const items = fs.readdirSync(folderPath);
+  items.forEach((item) => {
+    const itemPath = path.join(folderPath, item);
+    const stats = fs.statSync(itemPath);
+
+    if (stats.isDirectory()) {
+      combinedHtml += `<h2>${item}</h2>`;
+      combinedHtml += traverseFolder(itemPath);
+    } else if (stats.isFile() && item.endsWith('.html')) {
+      const htmlFiles = [item];
+      combinedHtml += combineHeadAndBody(htmlFiles, folderPath);
+    }
+  });
+
+  return combinedHtml;
+};
+
+const baseHtmlFiles = fs.readdirSync(baseHtmlDir).filter((file) => file.endsWith('.html'));
+const combinedBaseHeadAndBody = combineHeadAndBody(baseHtmlFiles, baseHtmlDir);
+const combinedWCAGHeadAndBody = traverseFolder(wcagHtmlDir);
+
+fs.writeFileSync(combinedBaseHtmlFile, `<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8" />
+<script src="../assets/javascript/main.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/tests.css" />
+</head><title>Combined HTML</title><style>${cssStyles}</style></head><body>${combinedBaseHeadAndBody}</body></html>`, 'utf8');
+
+
+fs.writeFileSync(combinedWCAGHtmlFile, `<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8" />
+<script src="../assets/javascript/main.js"></script>
+<link rel="stylesheet" href="../assets/stylesheets/tests.css" />
+</head><title>Combined HTML</title><style>${cssStyles}</style></head><body>${combinedWCAGHeadAndBody}</body></html>`, 'utf8');
+
+console.log(`Combined HTML file written to ${combinedBaseHtmlFile}`);
+console.log(`Combined HTML file written to ${combinedWCAGHtmlFile}`);
