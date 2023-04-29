@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Content Restricting Display Orientation</h1>
+<main>
+  <div id="landscapeOnly">
+    <h2>Landscape-Only Content</h2>
+    <p>This content is only visible and operable in landscape orientation.</p>
+  </div>
+  <style>
+    #landscapeOnly {
+      display: none;
+    }
+
+    @media only screen and (orientation: landscape) {
+      #landscapeOnly {
+        display: block;
+      }
+    }
+  </style>
+</main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<html lang="en">
+    <h1>Content with Excessive Flashes</h1>
+  <main>
+    <div id="flashingContent">
+    
+      <p>
+        This text flashes rapidly and repeatedly: <span style="animation: flashing 0.1s infinite;">Flashing Text!</span>
+      </p>
+    </div>
+    <style>
+      @keyframes flashing {
+        0% {
+          color: black;
+        }
+        50% {
+          color: white;
+          background-color: black;
+        }
+        100% {
+          color: black;
+        }
+      }
+    </style>
+  </main>
+</html>

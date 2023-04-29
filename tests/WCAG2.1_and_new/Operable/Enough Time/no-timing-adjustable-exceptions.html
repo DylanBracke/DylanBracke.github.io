@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>no timing adjustable exceptions</h1>
+  <main>
+    
+    <p id="timer">Time remaining: <span id="countdown">30</span> seconds</p>
+    <button id="startButton">Start</button>
+    <script>
+      var countdownElement = document.getElementById('countdown');
+      var startButton = document.getElementById('startButton');
+      var timerInterval;
+  
+      // Start timer
+      startButton.addEventListener('click', function () {
+        timerInterval = setInterval(function () {
+          var timeLeft = parseInt(countdownElement.innerText);
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Time limit reached!');
+        countdownElement.innerText = '30';
+          } else {
+            countdownElement.innerText = timeLeft - 1;
+          }
+        }, 1000);
+      });
+  
+    
+    </script>
+  </main>
+  
+  
+</body>
+</html>

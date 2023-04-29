@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Functionality Requiring Multipoint or Path-based Gesture Without Alternative</h1>
+  <main>
+    <p>
+      Draw something
+    </p>
+    <canvas id="canvas" width="200" height="100" style="border:solid 2px black"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var drawing = false;
+  
+      // Draw on canvas using a path-based gesture
+      canvas.addEventListener('pointerdown', function (event) {
+        context.beginPath();
+        context.moveTo(event.clientX, event.clientY - 100);
+        drawing = true;
+      });
+  
+      canvas.addEventListener('pointermove', function (event) {
+        if (drawing) {
+          context.lineTo(event.clientX, event.clientY -100);
+          context.stroke();
+        }
+      });
+  
+      canvas.addEventListener('pointerup', function () {
+        drawing = false;
+      });
+    </script>
+  </main>
+  
+  
+</body>
+</html>

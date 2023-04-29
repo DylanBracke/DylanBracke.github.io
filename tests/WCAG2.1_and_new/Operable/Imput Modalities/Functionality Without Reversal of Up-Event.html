@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Functionality Without Reversal of Up-Event</h1>
+<main>
+  
+  <button id="likeButton">Like</button>
+  <span id="likeCount">0</span>
+  <script>
+    var likeButton = document.getElementById('likeButton');
+    var likeCount = document.getElementById('likeCount');
+    var liked = false;
+
+    // Like post on button click
+    likeButton.addEventListener('pointerdown', function () {
+      if (!liked) {
+        likeCount.innerText = parseInt(likeCount.innerText) + 1;
+        liked = true;
+      }
+    });
+  </script>
+</main>
+</body>
+</html>

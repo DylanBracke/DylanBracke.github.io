@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+  <body>
+    <h1>Auto-updating Information Without Mechanism for Control</h1>
+    <main>
+     <p>Stock gets updated every 5 seconds</p>
+      <div id="stock">
+        <h2>Stock Prices</h2>
+        <p>
+          Apple: $<span id="applePrice"></span><br>
+          Google: $<span id="googlePrice"></span><br>
+          Tesla: $<span id="teslaPrice"></span>
+        </p>
+      </div>
+      <script>
+        
+        function updateStock() {
+          var applePriceElement = document.getElementById('applePrice');
+          var googlePriceElement = document.getElementById('googlePrice');
+          var teslaPriceElement = document.getElementById('teslaPrice');
+    
+          // Generate random stock prices
+          var applePrice = Math.floor(Math.random() * (150 - 50) + 50).toFixed(2);
+          var googlePrice = Math.floor(Math.random() * (1500 - 500) + 500).toFixed(2);
+          var teslaPrice = Math.floor(Math.random() * (1000 - 200) + 200).toFixed(2);
+    
+          applePriceElement.innerText = applePrice;
+          googlePriceElement.innerText = googlePrice;
+          teslaPriceElement.innerText = teslaPrice;
+        }
+    
+        setInterval(updateStock, 5000); // Update stock prices every 5 seconds
+      </script>
+    </main>
+    
+    
+  </body>
+  </html>
+  
+  
+</body>
+</html>

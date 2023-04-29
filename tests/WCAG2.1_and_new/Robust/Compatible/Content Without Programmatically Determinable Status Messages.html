@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accessibility test</title>
+  <meta charset="utf-8" />
+  <script src="../assets/javascript/main.js"></script>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+</head>
+<body>
+  <h1>Content Without Programmatically Determinable Status Messages</h1>
+  <main>
+    
+    <div id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <p>Progress:</p>
+      <div class="progressBarFill" style="width: 0; background-color: green; height: 5px;"></div>
+    </div>
+    <script>
+      var progressBar = document.getElementById('progressBar');
+      var progressBarFill = progressBar.querySelector('.progressBarFill');
+      var progress = 0;
+  
+      setInterval(function() {
+        progress += 10;
+        if (progress > 100) {
+          progress = 0;
+        }
+        progressBarFill.style.width = progress + '%';
+        progressBar.setAttribute('aria-valuenow', progress);
+      }, 1000);
+    </script>
+  </main>
+  
+  
+  
+</body>
+</html>
