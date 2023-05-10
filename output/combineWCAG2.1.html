@@ -107,13 +107,13 @@
   </div><h2>Keyboard Accesible</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-accesskey-attribute-used.html', '_blank')">Accesskey attribute used</h1></div><div class="test">
     <a accesskey="A" href="page.html">A link with an accesskey attribute</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-alert-shows-for-a-short-time.html', '_blank')">Alert shows for a short time</h1></div><div class="test">
-    <p class="disappearing-alert hidden">
-            You should complete this form in 20 minutes
-        </p>
-<label>
-            Prisoner's name
-            <input type="text">
-</label>
+    <p class="disappearing-alert" role="alert">
+      You should complete this form in 20 minutes
+    </p>
+    <label>
+      Prisoner's name
+      <input type="text">
+    </label>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-concertina-items-dont-get-keyboard-focus.html', '_blank')">Concertina items don't get keyboard focus</h1></div><div class="test">
     <dl class="concertina">
 <dt>Understanding user research</dt>
@@ -164,42 +164,6 @@
     <a class="no-outline" href="link.html">Link with no focus style</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-keyboard-trap.html', '_blank')">Keyboard trap</h1></div><div class="test">
     <p><a href="../example-pages/keyboardtrap.html">Example page that contains a keyboard trap</a></p>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-lightbox-close-button-doesnt-receive-focus.html', '_blank')">Lightbox - close button doesn't receive focus</h1></div><div class="test">
-    <a class="open-lightbox-close-button" href="#">Open lightbox</a>
-<div class="lightbox close-button hidden">
-<span title="Close lightbox" class="close-button">X</span>
-<p>
-                This lightbox's close button isn't a link so you can't focus on it.
-                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
-            </p>
-</div>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-lightbox-esc-key-doesnt-close-the-lightbox.html', '_blank')">Lightbox - ESC key doesn't close the lightbox</h1></div><div class="test">
-    <a class="open-lightbox-unescapable" href="#">Open lightbox</a>
-<div class="lightbox unescapable hidden">
-<a title="Close lightbox" class="close-button" href="#">X</a>
-<p>
-                This lightbox can't be closed with an escape key.
-                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
-            </p>
-</div>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-lightbox-focus-is-not-moved-immediately-to-lightbox.html', '_blank')">Lightbox - focus is not moved immediately to lightbox</h1></div><div class="test">
-    <a class="open-lightbox-focus-far" href="#">Open lightbox</a>
-<div class="lightbox focus-far hidden">
-<span title="Close lightbox" class="close-button">X</span>
-<p>
-                This lightbox is placed at the end of the DOM so you'll have to tab through other links to reach it.
-                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
-            </p>
-</div>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-lightbox-focus-is-not-retained-within-the-lightbox.html', '_blank')">Lightbox - focus is not retained within the lightbox</h1></div><div class="test">
-    <a class="open-lightbox-not-focused" href="#">Open lightbox</a>
-<div class="lightbox not-focused hidden">
-<a title="Close lightbox" class="close-button" href="#">X</a>
-<p>
-                This lightbox doesn't retain the focus within itself.
-                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" target="_blank">information about mental capacity</a>.
-            </p>
-</div>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-link-with-a-rolebutton-does-not-work-with-space-bar.html', '_blank')">Link with a role=button does not work with space bar</h1></div><div class="test">
     <a class="button" href="next.html" role="button">Continue</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Keyboard Accesible/keyboard-access-tabindex-greater-than-0.html', '_blank')">Tabindex greater than 0</h1></div><div class="test">
@@ -250,7 +214,7 @@
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/links-blank-link-text.html', '_blank')">Blank link text</h1></div><div class="test">
     <a href="http://www.google.com"></a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/links-image-link-with-no-alternative-text.html', '_blank')">Image link with no alternative text</h1></div><div class="test">
-    <a href="http://www.bbc.co.uk"><img alt="" src="../assets/test_images/bbc-blocks-dark.png"></a>
+    <a href="http://www.bbc.co.uk"><img alt="" src="../../../../assets/test_images/bbc-blocks-dark.png"></a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/links-link-contains-only-a-full-stop.html', '_blank')">Link contains only a full stop</h1></div><div class="test">
             Visit the GOV.UK website <a href="https://www.gov.uk/">.</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/links-link-launches-new-window-with-no-warning.html', '_blank')">Link launches new window with no warning</h1></div><div class="test">
@@ -272,11 +236,11 @@
             encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.</p>
 <a href="https://en.wikipedia.org/wiki/Polar_bear">Read more</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/page-title-empty-page-title.html', '_blank')">Empty page title</h1></div><div class="test">
-    <a href="../example-pages/empty.html">Example page with a empty page title</a>
+    <a href="../../../../example-pages/empty.html">Example page with a empty page title</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/page-title-inappropriate-page-title.html', '_blank')">Inappropriate page title</h1></div><div class="test">
-    <a href="../example-pages/inappropriate.html">Example page with a inappropriate page title</a>
+    <a href="../../../../example-pages/inappropriate.html">Example page with a inappropriate page title</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/page-title-missing-page-title.html', '_blank')">Missing page title</h1></div><div class="test">
-    <a href="../example-pages/missing.html">Example page with a missing page title</a>
+    <a href="../../../../example-pages/missing.html">Example page with a missing page title</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Operable/Navigable/tables-table-has-an-empty-table-header.html', '_blank')">Table has an empty table header</h1></div><div class="test">
     <table>
 <caption>Shelly's Daughters</caption>
@@ -354,7 +318,7 @@
 <div style="float:right; width:33%">Exfoliate</div>
 <div style="float:right; width:33%">Cleanse</div></div>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Adaptable/content-content-is-not-organised-into-well-defined-groups-or-chunks-using-headings,-lists,-and-other-visual-mechanisms.html', '_blank')">Content is not organised into well-defined groups or chunks, using headings, lists, and other visual mechanisms</h1></div><div class="test">
-    <a href="../example-pages/unorganised_content.html">Example page with a long block of unorganised content.</a>
+    <a href="../../../../example-pages/unorganised_content.html">Example page with a long block of unorganised content.</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Adaptable/css-non-decorative-content-inserted-using-css.html', '_blank')">Non-decorative content inserted using CSS</h1></div><div class="test">
     <p id="css-generated-text">My favourite food is </p>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Adaptable/forms-empty-label-found.html', '_blank')">Empty label found</h1></div><div class="test">
@@ -434,7 +398,7 @@
 <input id="two-labels-year" type="text">
 </p></form>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Adaptable/html-spacer-image-found.html', '_blank')">Spacer image found</h1></div><div class="test">
-    We are here. <img alt="" height="1" src="../assets/test_images/spacer.gif" width="100"> And you are there.
+    We are here. <img alt="" height="1" src="../../../../assets/test_images/spacer.gif" width="100"> And you are there.
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Adaptable/keyboard-access-focus-order-in-wrong-order.html', '_blank')">Focus order in wrong order</h1></div><div class="test">
     <div class="focus-order-broken">
 <a class="first" href="#">First link</a>
@@ -442,7 +406,7 @@
 <a class="Third" href="#">Third link</a>
 </div>
   </div><h2>Distinguishable</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/automatically-audio-cant-be-paused.html', '_blank')">automatically audio cant be paused</h1></div><div class="test">
-    <audio id="audio" src="../../assets/media/piano2.wav" autoplay="">
+    <audio id="audio" src="../../../../assets/media/piano2.wav" autoplay="">
       Your browser does not support the audio element.
     </audio>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/colour-and-contrast-colour-alone-is-used-to-convey-content.html', '_blank')">Colour alone is used to convey content</h1></div><div class="test">
@@ -462,10 +426,7 @@
     <p class="low-contrast-small-aa">This small text does not have enough contrast with it's background</p>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/colour-and-contrast-small-text-does-not-have-a-contrast-ratio-of-at-least-71-so-does-not-meet-aaa.html', '_blank')">Small text does not have a contrast ratio of at least 7:1 so does not meet AAA</h1></div><div class="test">
     <p class="low-contrast-small-aaa">This small text does not have enough contrast with it's background</p>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/css-content-is-not-readable-and-functional-when-text-is-increased.html', '_blank')">Content is not readable and functional when text is increased</h1></div><div class="test">
-    <p class="resize">This text becomes unreadable when you increase the text-size  (Zoom text only) in
-            <a href="https://www.mozilla.org/en-GB/firefox/desktop/">Firefox</a></p>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/css-displaynone-used-to-visually-hide-content-when-it-should-be-available-to-screenreader.html', '_blank')">display:none used to visually hide content when it should be available to screenreader</h1></div><div class="test">
+  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/css-content-is-not-readable-and-functional-when-text-is-increased.html', '_blank')">CSS content is not readable and functional when text is increased</h1></div><div class="test">null</div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/css-displaynone-used-to-visually-hide-content-when-it-should-be-available-to-screenreader.html', '_blank')">display:none used to visually hide content when it should be available to screenreader</h1></div><div class="test">
     <a href="football.html">Read more <span style="display:none"> about football</span></a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/css-page-zoom-boxes-that-dont-expand-with-the-text.html', '_blank')">Page zoom - boxes that don't expand with the text</h1></div><div class="test">
     <div class="wont-expand-box">The box below this example won't expand to fit the text contained within when zoomed in.<p class="wont-expand">This service is for England and Wales only. You must contact individual <a href="https://www.justice-ni.gov.uk/topics/prisons/prison-visits">prisons in Northern Ireland</a> or <a href="http://www.sps.gov.uk/Corporate/Prisons/Prisons.aspx">Scotland</a> to book a visit.</p></div>
@@ -534,35 +495,35 @@
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Distinguishable/typography-very-small-text-found.html', '_blank')">Very small text found</h1></div><div class="test">
     <p class="small-text">This is some tiny text, much too small for some people to read</p>
   </div><h2>Text Alternatives</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/buttons-empty-alt-attribute-on-image-button.html', '_blank')">Empty alt attribute on image button</h1></div><div class="test">
-    <input alt="" src="../assets/test_images/submit.png" type="image">
+    <input alt="" src="../../../../assets/test_images/submit.png" type="image">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/buttons-image-button-has-no-alt-attribute.html', '_blank')">Image button has no alt attribute</h1></div><div class="test">
-    <input src="../assets/test_images/submit.png" type="image">
+    <input src="../../../../assets/test_images/submit.png" type="image">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/buttons-uninformative-alt-attribute-value-on-image-button.html', '_blank')">Uninformative alt attribute value on image button</h1></div><div class="test">
-    <input alt="click" src="../assets/test_images/submit.png" type="image">
+    <input alt="click" src="../../../../assets/test_images/submit.png" type="image">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-background-image-that-conveys-information-does-not-have-a-text-alternative.html', '_blank')">Background image that conveys information does not have a text alternative</h1></div><div class="test">
     <div class="warning-icon">
             Taking too much of your pension money in early retirement could mean you don't have enough for later.
         </div>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-alt-attribute-contains-image-file-name.html', '_blank')">Image alt attribute contains image file name</h1></div><div class="test">
-    <img alt="bbc-blocks-dark.png" src="../assets/test_images/bbc-blocks-dark.png">
+    <img alt="bbc-blocks-dark.png" src="../../../../assets/test_images/bbc-blocks-dark.png">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-has-alt-and-title-that-are-different.html', '_blank')">Image has alt and title that are different</h1></div><div class="test">
-    <img alt="BBC" src="../assets/test_images/bbc-blocks-dark.png" title="BBC homepage">
+    <img alt="BBC" src="../../../../assets/test_images/bbc-blocks-dark.png" title="BBC homepage">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-has-empty-alt-and-non-empty-title.html', '_blank')">Image has empty alt and non-empty title</h1></div><div class="test">
-    <img alt="" src="../assets/test_images/bbc-blocks-dark.png" title="BBC">
+    <img alt="" src="../../../../assets/test_images/bbc-blocks-dark.png" title="BBC">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-that-conveys-information-has-an-empty-alt-attribute.html', '_blank')">Image that conveys information has an empty alt attribute</h1></div><div class="test">
-    <img alt="" src="../assets/test_images/bbc-blocks-dark.png">
+    <img alt="" src="../../../../assets/test_images/bbc-blocks-dark.png">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-that-conveys-information-has-inappropriate-alt-text.html', '_blank')">Image that conveys information has inappropriate alt text</h1></div><div class="test">
-    <img alt="Twitter" src="../assets/test_images/bbc-blocks-dark.png">
+    <img alt="Twitter" src="../../../../assets/test_images/bbc-blocks-dark.png">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-with-no-alt-attribute.html', '_blank')">Image with no alt attribute</h1></div><div class="test">
-    <img src="../assets/test_images/bbc-blocks-dark.png">
+    <img src="../../../../assets/test_images/bbc-blocks-dark.png">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-with-partial-text-alternative.html', '_blank')">Image with partial text alternative</h1></div><div class="test">
     <p>The image below contains a lot of information, such as which departments the sale is on. The text alternative in the alt attribute does not include this information, only a partial "25% off sale"</p>
-<img alt="25% off sale" src="../assets/test_images/sale.jpg">
+<img alt="25% off sale" src="../../../../assets/test_images/sale.jpg">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/images-image-with-presentation-role-has-non-empty-alt.html', '_blank')">Image with presentation role has non-empty alt</h1></div><div class="test">
-    <img alt="Decorative line clipart" height="118" role="presentation" src="../assets/test_images/decoration.png" width="368">
+    <img alt="Decorative line clipart" height="118" role="presentation" src="../../../../assets/test_images/decoration.png" width="368">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/links-image-link-alt-text-repeats-text-in-the-link.html', '_blank')">Image link alt text repeats text in the link</h1></div><div class="test">
     <a href="https://en.wikipedia.org/wiki/Red_panda">
-<img alt="Red Panda" height="165" src="../assets/test_images/red_panda.jpg" width="220">
+<img alt="Red Panda" height="165" src="../../../../assets/test_images/red_panda.jpg" width="220">
             Red Panda
         </a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Perceivable/Text Alternatives/links-link-text-with-identical-title.html', '_blank')">Link text with identical title</h1></div><div class="test">
@@ -603,7 +564,7 @@
 <input id="label-for-not-matching" type="checkbox" value="yes">
 </fieldset></form>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Robust/Compatible/frames-iframe-is-missing-a-title-attribute.html', '_blank')">iframe is missing a title attribute</h1></div><div class="test">
-    <iframe height="100" src="../example-pages/demo.html" width="300"></iframe>
+    <iframe height="100" src="../../../../example-pages/demo.html" width="300"></iframe>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Robust/Compatible/html-article-element-used-to-mark-up-an-element-thats-not-an-article-blog-post-etc..html', '_blank')">Article element used to mark-up an element that's not an article/blog post etc.</h1></div><div class="test">
     <article class="not-article-content">
 <h2 id="parent-other">Elsewhere on GOV.UK</h2>
@@ -942,25 +903,17 @@ times</caption>
       <li>Item 7</li>
       <li>Item 8</li>
     </ul>
-  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Predictable/forms-form-control-that-changes-context-without-warning.html', '_blank')">Form control that changes context without warning</h1></div><div class="test">
-    <form><label for="language-selector">Select your language</label>
-<select class="language-selector" id="language-selector">
-<option value="">Change your language</option>
-<option value="en">English</option>
-<option value="de">German</option>
-<option value="fr">French</option>
-</select></form>
-  </div><h2>Readable</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/content-first-instance-of-abbreviation-not-expanded.html', '_blank')">First instance of abbreviation not expanded</h1></div><div class="test">
+  </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Predictable/forms-form-control-that-changes-context-without-warning.html', '_blank')">Form control that changes context without warning</h1></div><div class="test">null</div><h2>Readable</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/content-first-instance-of-abbreviation-not-expanded.html', '_blank')">First instance of abbreviation not expanded</h1></div><div class="test">
     <abbr>GDS</abbr> is part of the Cabinet Office. Our job is digital transformation of government.
     
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-html-element-has-an-empty-lang-attribute.html', '_blank')">html element has an empty lang attribute</h1></div><div class="test">
-    <a href="../example-pages/empty.html">Example page with an empty lang attribute</a>
+    <a href="../../../../example-pages/empty.html">Example page with an empty lang attribute</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-html-element-has-an-invalid-value-in-the-lang-attribute.html', '_blank')">html element has an invalid value in the lang attribute</h1></div><div class="test">
-    <a href="../example-pages/invalid.html">Example page with an invalid lang attribute</a>
+    <a href="../../../../example-pages/invalid.html">Example page with an invalid lang attribute</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-html-element-has-lang-attribute-set-to-wrong-language.html', '_blank')">html element has lang attribute set to wrong language</h1></div><div class="test">
-    <a href="../example-pages/inappropriate.html">Example page with a lang attribute set to the wrong language</a>
+    <a href="../../../../example-pages/inappropriate.html">Example page with a lang attribute set to the wrong language</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-html-element-is-missing-a-lang-attribute.html', '_blank')">html element is missing a lang attribute</h1></div><div class="test">
-    <a href="../example-pages/missing.html">Example page with a missing lang attribute</a>
+    <a href="../../../../example-pages/missing.html">Example page with a missing lang attribute</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-lang-attribute-not-used-to-identify-change-of-language.html', '_blank')">lang attribute not used to identify change of language</h1></div><div class="test">
     <p>Mother, he's asking you to go. He's saying, "Allons, Madame plaisante!"</p>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-lang-attribute-used-to-identify-change-of-language-but-with-invalid-value.html', '_blank')">lang attribute used to identify change of language, but with invalid value</h1></div><div class="test">
@@ -972,13 +925,13 @@ times</caption>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Understandable/Readable/language-of-content-text-language-is-in-the-wrong-direction.html', '_blank')">Text language is in the wrong direction</h1></div><div class="test">
     <p dir="rtl" lang="en">Electronic visa waiver</p>
   </div><h2>Z_Other</h2><h2>Not_Categorized</h2><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/frames-iframe-title-attribute-does-not-describe-the-content-or-purpose-of-the-iframe.html', '_blank')">iframe title attribute does not describe the content or purpose of the iframe</h1></div><div class="test">
-    <iframe height="100" src="../example-pages/demo.html" title="Facebook" width="300"></iframe>
+    <iframe height="100" src="../../../../example-pages/demo.html" title="Facebook" width="300"></iframe>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/images-a-distraction-is-present-an-animated-gif.html', '_blank')">A distraction is present, an animated gif</h1></div><div class="test">
     <img alt="Animated gif of a Christmas tree with a toy train round and round the base of the tree" height="193" src="../assets/test_images/animated-tree.gif" width="157">
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/links-link-to-a-multimedia-file-no-transcript.html', '_blank')">Link to a multimedia file, no transcript</h1></div><div class="test">
     <a href="interview.mov">Watch the interview</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/links-link-to-an-image-no-text-alternative.html', '_blank')">Link to an image, no text alternative</h1></div><div class="test">
-            My favourite <a href="../assets/test_images/bat.jpg">bat</a>
+            My favourite <a href="../../../../assets/test_images/bat.jpg">bat</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/links-link-to-javascript-invalid-hypertext-reference.html', '_blank')">Link to javascript, invalid hypertext reference</h1></div><div class="test">
     <a href="javascript:alert('Hello world!')">Press me!</a>
   </div><div><h1 onclick="window.open('../tests/WCAG2.1_and_new/Z_Other/Not_Categorized/links-link-to-pdf-does-not-include-information-on-file-format-and-file-size.html', '_blank')">Link to PDF does not include information on file format and file size</h1></div><div class="test">
