@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Accessibility tools audit test - Form control that changes context without warning - GDS accessibility team</title>
-  <script src="../assets/javascript/jquery-1.12.0.min.js"></script>
-  <script src="../assets/javascript/main.js"></script>
-  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css" />
+  <meta charset="UTF-8">
+  <title>Form control that changes context without warning</title>
+  <link rel="stylesheet" href="../../../../assets/stylesheets/tests.css">
 </head>
 <body>
   <h1>Form control that changes context without warning</h1>
-  <main>
-    <form><label for="language-selector">Select your language</label>
-<select class="language-selector" id="language-selector">
-<option value="">Change your language</option>
-<option value="en">English</option>
-<option value="de">German</option>
-<option value="fr">French</option>
-</select></form>
-  </main>
+  <form>
+    <label>
+      <span>Choose your preferred language:</span>
+      <select id="language-select">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select>
+    </label>
+  </form>
+  <p>This form control changes the language of the page without warning or explanation, which can be disorienting for some users.</p>
+  <p>The current language is: <span id="current-language">English</span></p>
+  
+  <script>
+    const languageSelect = document.getElementById('language-select');
+    const currentLanguage = document.getElementById('current-language');
+    
+    languageSelect.addEventListener('change', function() {
+      const selectedValue = this.value;
+      if (selectedValue === 'spanish') {
+        document.documentElement.lang = 'es';
+        currentLanguage.innerText = 'Spanish';
+      } else if (selectedValue === 'french') {
+        document.documentElement.lang = 'fr';
+        currentLanguage.innerText = 'French';
+      } else {
+        document.documentElement.lang = 'en';
+        currentLanguage.innerText = 'English';
+      }
+    });
+  </script>
 </body>
 </html>
+
